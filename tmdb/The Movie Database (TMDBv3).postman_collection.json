@@ -1,0 +1,207 @@
+{
+	"variables": [],
+	"info": {
+		"name": "The Movie Database (TMDBv3)",
+		"_postman_id": "835e4a90-3ee0-0621-2c17-943339e03bde",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "People",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Details",
+					"request": {
+						"url": {
+							"raw": "https://{{tmdb_url}}/{{version}}/person/:person_id?api_key={{api_key}}&language=en-US",
+							"protocol": "https",
+							"host": [
+								"{{tmdb_url}}"
+							],
+							"path": [
+								"{{version}}",
+								"person",
+								":person_id"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "language",
+									"value": "en-US",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": [
+								{
+									"key": "person_id",
+									"value": "6384"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "person_id",
+								"value": "",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "api_key",
+								"value": "9ef5a38bf1541140441b3bd8c8c02043",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"description": "https://developers.themoviedb.org/3/people/get-person-details"
+					},
+					"response": []
+				},
+				{
+					"name": "Search People",
+					"request": {
+						"url": {
+							"raw": "https://{{tmdb_url}}/{{version}}/search/person?api_key={{api_key}}&language=en-US&query=keanu reeves",
+							"protocol": "https",
+							"host": [
+								"{{tmdb_url}}"
+							],
+							"path": [
+								"{{version}}",
+								"search",
+								"person"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "language",
+									"value": "en-US",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "query",
+									"value": "keanu reeves",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "https://developers.themoviedb.org/3/search/search-people"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie Credits",
+					"request": {
+						"url": {
+							"raw": "https://{{tmdb_url}}/{{version}}/person/:person_id/movie_credits?api_key={{api_key}}&language=en-US",
+							"protocol": "https",
+							"host": [
+								"{{tmdb_url}}"
+							],
+							"path": [
+								"{{version}}",
+								"person",
+								":person_id",
+								"movie_credits"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "language",
+									"value": "en-US",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": [
+								{
+									"key": "person_id",
+									"value": "6384"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "https://developers.themoviedb.org/3/people/get-person-movie-credits"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Credits",
+					"request": {
+						"url": {
+							"raw": "https://{{tmdb_url}}/{{version}}/movie/:movie_id/credits?api_key={{api_key}}&language=en-US",
+							"protocol": "https",
+							"host": [
+								"{{tmdb_url}}"
+							],
+							"path": [
+								"{{version}}",
+								"movie",
+								":movie_id",
+								"credits"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "language",
+									"value": "en-US",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": [
+								{
+									"key": "movie_id",
+									"value": "603"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "https://developers.themoviedb.org/3/movies/get-movie-credits"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
